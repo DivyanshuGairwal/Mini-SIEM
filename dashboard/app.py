@@ -1,4 +1,3 @@
-import streamlit as st
 import pandas as pd
 import sqlite3
 import plotly.express as px
@@ -15,14 +14,15 @@ st.set_page_config(
 )
 
 import os
-import streamlit as st
+
+
+DB = "outputs/threat_alerts.db"
 
 if not os.path.exists(DB):
     st.error("Database not found🚫")
     st.info("run the pipeline locally to generate alerts database.")
     st.stop()
 
-DB = "outputs/threat_alerts.db"
 
 # ── Custom CSS — dark SOC theme ───────────────────────────
 st.markdown("""
