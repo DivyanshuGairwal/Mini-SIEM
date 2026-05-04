@@ -1,3 +1,4 @@
+import streamlit as st
 import pandas as pd
 import sqlite3
 import plotly.express as px
@@ -5,7 +6,7 @@ import plotly.graph_objects as go
 from datetime import datetime
 import os
 
-# ── Page config ───────────────────────────────────────────
+# ✅ FIRST Streamlit command
 st.set_page_config(
     page_title="Mini SIEM — SOC Dashboard",
     page_icon="🛡",
@@ -13,14 +14,13 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-import os
-
-
+# ✅ THEN define DB
 DB = "outputs/threat_alerts.db"
 
+# ✅ THEN check DB
 if not os.path.exists(DB):
-    st.error("Database not found🚫")
-    st.info("run the pipeline locally to generate alerts database.")
+    st.error("Database not found 🚫")
+    st.info("Run pipeline.py locally to generate alerts database.")
     st.stop()
 
 
