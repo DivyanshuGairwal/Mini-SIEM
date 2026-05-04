@@ -14,6 +14,14 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+import os
+import streamlit as st
+
+if not os.path.exists(DB):
+    st.error("Database not found🚫")
+    st.info("run the pipeline locally to generate alerts database.")
+    st.stop()
+
 DB = "outputs/threat_alerts.db"
 
 # ── Custom CSS — dark SOC theme ───────────────────────────
