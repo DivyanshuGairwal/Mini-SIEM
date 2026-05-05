@@ -7,10 +7,10 @@ A lightweight Security Operations Centre (SOC) platform that detects, analyzes, 
 ## 🚀 Overview
 
 Mini SIEM simulates a real-world SOC environment where security analysts monitor logs, detect anomalies, and investigate threats.
-
 The system processes multiple cybersecurity datasets, applies detection logic, and presents insights through an interactive dashboard.
 
 ---
+
 
 ## ⚙️ Features
 
